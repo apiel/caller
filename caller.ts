@@ -1,6 +1,6 @@
-export const base = 3;
+export const up = 3;
 
-export default function caller(levelUp = base) {
+export default function caller(levelUp = up) {
     const err = new Error();
     const stack = err.stack?.split('\n')[levelUp];
     if (stack) {
