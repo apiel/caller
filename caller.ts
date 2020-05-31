@@ -1,7 +1,7 @@
 export const defaultLevelUp = 3;
 
 export function callerUp(level: number) {
-    caller(defaultLevelUp + level);
+    return caller(defaultLevelUp + level);
 }
 
 export default function caller(levelUp = defaultLevelUp) {
