@@ -1,7 +1,7 @@
 import caller from '../caller.ts';
 
 export function fn2() {
-    const file = caller.bind({ cb: (file) => file.replace('file:///', '/') })();
+    const file = caller.bind({ cb: (file: string) => file.replace('file:///', '/') })();
 
     const expectedFile = import.meta.url
         .replace('03-child.ts', '03.ts')

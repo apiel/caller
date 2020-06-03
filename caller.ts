@@ -4,7 +4,7 @@ export interface Bind {
 
 export const up = 3;
 
-export default function caller(this: Bind | void, levelUp = up) {
+export default function caller(this: Bind | any, levelUp = up) {
     const err = new Error();
     const stack = err.stack?.split('\n')[levelUp];
     if (stack) {
@@ -12,7 +12,7 @@ export default function caller(this: Bind | void, levelUp = up) {
     }
 }
 
-export function getFile(this: Bind | void, stack: string) {
+export function getFile(this: Bind | any, stack: string) {
     stack = stack.substr(stack.indexOf('at ') + 3);
     if (!stack.startsWith('file://')) {
         stack = stack.substr(stack.indexOf('(') + 1);
