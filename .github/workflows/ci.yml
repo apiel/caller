@@ -17,3 +17,4 @@ jobs:
       - run: deno --version
       - run: deno run test/01.ts
       - run: deno test test/02.ts
+      - run: deno run test/03.ts

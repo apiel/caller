@@ -1,4 +1,4 @@
-import { fn2 } from './01-child.ts';
+import { fn2 } from './03-child.ts';
 
 
 function fn1() {
