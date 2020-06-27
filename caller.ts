@@ -15,7 +15,7 @@ export default function caller(this: Bind | any, levelUp = up) {
 export function getFile(this: Bind | any, stack: string) {
     stack = stack.substr(stack.indexOf('at ') + 3);
     if (!stack.startsWith('file://')) {
-        stack = stack.substr(stack.indexOf('(') + 1);
+        stack = stack.substr(stack.lastIndexOf('(') + 1);
     }
     const path = stack.split(':');
     let file = `${path[0]}:${path[1]}`;
